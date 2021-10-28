@@ -1,13 +1,13 @@
 def Delete_at_end(self):
-    if(self.head):
-        if(self.head.next):
-            nodo=self.head
-            while(nodo.next.next):
-                nodo=nodo.next
+    if(self.start_node):
+        if(self.start_node.nref):
+            nodo=self.start_node
+            while(nodo.nref.nref):
+                nodo=nodo.nref
 
-            nodo.next.prev=None
-            nodo.next=None
+            nodo.nref.pref=None
+            nodo.nref=None
         else:
-            self.head=None
+            self.start_node=None
     else:
         raise Exception("no hay elementos en la lista para eliminar")
